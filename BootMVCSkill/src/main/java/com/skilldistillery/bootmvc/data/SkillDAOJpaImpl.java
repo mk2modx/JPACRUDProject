@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.skilldistillery.skill.entities.Skill;
@@ -15,6 +16,7 @@ import com.skilldistillery.skill.entities.Skill;
 @Transactional
 public class SkillDAOJpaImpl implements SkillDAO{
 
+	@Autowired
 	private EntityManager em;
 	
 	@Override
@@ -25,7 +27,7 @@ public class SkillDAOJpaImpl implements SkillDAO{
 	@Override
 	public List<Skill> findAll() {
 List<Skill> list = new ArrayList<>();
-		String query = "SELECT s FROM Skill f";
+		String query = "SELECT s FROM Skill s";
 		return list = em.createQuery(query,Skill.class).getResultList();
 	}
 

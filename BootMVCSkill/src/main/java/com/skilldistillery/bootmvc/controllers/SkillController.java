@@ -3,6 +3,7 @@ package com.skilldistillery.bootmvc.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.skilldistillery.bootmvc.data.SkillDAO;
 import com.skilldistillery.skill.entities.Skill;
 
+@Controller
 public class SkillController {
 
 	@Autowired
@@ -26,7 +28,7 @@ public class SkillController {
 	}
 	
 	@RequestMapping(path = "getSkill.do")
-	public String showFilm(@RequestParam("skillId") Integer sid, Model model) {
+	public String showFilm(@RequestParam("ski") Integer sid, Model model) {
 	Skill f = dao.findSkillById(sid);
 	model.addAttribute("skill", f);
 		

@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `skill` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `skill_name` VARCHAR(300) NOT NULL,
   `description` VARCHAR(5000) NULL,
-  `proficiency` ENUM("BEG", "INT", "ADV") NULL,
+  `proficiency` VARCHAR(3) NULL,
   `point_value` INT NULL,
   `link` VARCHAR(500) NULL,
   PRIMARY KEY (`id`))

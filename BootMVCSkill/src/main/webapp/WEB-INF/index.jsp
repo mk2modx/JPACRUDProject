@@ -9,7 +9,7 @@
 </head>
 <body>
 <form action="getSkill.do" method="GET">
-  Film ID: <input type="text" name="skillId" />
+  Film ID: <input type="text" name="ski" />
   <input type="submit" value="Show Skill" />
 </form>
 
@@ -17,7 +17,7 @@
 <br>
 
 <br>
-<div>
+
 
 
 <c:forEach items="${skillset}" var="skill">
