@@ -13,13 +13,10 @@ public class Skill {
 	private int id;
 	@Column(name="skill_name")
 	private String name;
-	
 	private String description;
-	
 	private String proficiency;
 	@Column(name="point_value")
 	private int pointValue;
-	
 	private String link;
 	
 	
