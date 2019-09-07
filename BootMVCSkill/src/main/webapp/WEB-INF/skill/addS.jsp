@@ -9,8 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Update Film</h1>
-
+<h1>Add Film</h1>
+<a href="home.do">Home</a>
 
 <form action ="addSkillForm.do" method="POST" >
 <table>

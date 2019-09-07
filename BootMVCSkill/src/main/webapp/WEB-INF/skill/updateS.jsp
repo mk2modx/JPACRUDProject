@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Update Film</h1>
-
+<a href="home.do">Home</a>
 
 <form action ="updateSkill.do" method="POST" >
 <table>

@@ -8,31 +8,49 @@
 <title>Main Menu</title>
 </head>
 <body>
-<form action="getSkill.do" method="GET">
-  Film ID: <input type="text" name="ski" />
+<div>
+<table><tr>
+<td><form action="getSkill.do" method="GET">
+  Search for Skills <input type="text" name="ski" >
   <input type="submit" value="Show Skill" />
-</form>
-<br>
-<div>
+</form><td>
+<td>
 <form action="addSkillLink.do">
-<input type="submit" value="Add Skill">
-</form>
+<input type="submit" value="Add Skill" style="height:220px; width:150px">
+</form></td>
+</tr></table>
 </div>
-<div>
+<!-- <div>
 <form action="updateLink.do" method="GET">
 Film ID: <input type="text" name="upd"/>
 <input type="submit" value="Update Skill">
 </form>
-</div>
+</div> -->
 <br>
+<div>
+<table class="table table-striped">
+
 <c:forEach items="${skillset}" var="skill">
-  <h5><a href="getSkill.do?skillId=${skill.id}">${skill.id} </a> </h5>
-  <h5><a href="getSkill.do?skillId=${skill.id}">${skill.name} </a> </h5>
-  <h5><a href="getSkill.do?skillId=${skill.id}">${skill.proficiency} </a> </h5>
-  <h5><a href="getSkill.do?skillId=${skill.id}">${skill.pointValue} </a> </h5>
-  <h5><a href="getSkill.do?skillId=${skill.id}">${skill.link} </a> </h5>
+<tr>
+  <td><h3> Skill : ${skill.id} </h3></td>
+  <td><h3><a href="getSkill.do?skillId=${skill.id}">${skill.name} </a> </h3></td>
+  </tr>
+  <tr>
+  <td><form action="deleteSkill.do" method="GET">
+<input name="idd" type="hidden" value="${skill.id}" />
+<input type="submit" value="Delete Skill">
+</form></td>
+
+  <td><form action="updateLink.do" method="GET">
+<input name="upd" type="hidden" value="${skill.id}" />
+<input type="submit" value="Update Skill">
+</form>
+</td>
+</tr>
 </c:forEach>
 
+</table>
+</div>
 
 </body>
 </html>

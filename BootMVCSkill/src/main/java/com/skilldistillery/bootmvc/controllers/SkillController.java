@@ -43,12 +43,10 @@ public class SkillController {
 	}
 	
 	@RequestMapping(path = "addSkillForm.do", method = RequestMethod.POST)
-	public ModelAndView createSkill(Skill skill) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("index");
-		 dao.create(skill);
-		mv.addObject("added", skill);
-		return mv;
+	public String createSkill(Skill skill, Model model) {
+model.addAttribute("added", skill);
+		dao.create(skill);
+		return "skill/show";
 	}
 	@RequestMapping(path = "updateLink.do", method = RequestMethod.GET)
 	public String updateLink(@RequestParam("upd")Integer num, Model model) {
@@ -63,19 +61,18 @@ public class SkillController {
 	public String updateSkill(Skill skill, Model model) {
 		
 		dao.update(skill);
-		model.addAttribute("update",skill);
-		return "index";
+		model.addAttribute("updated",skill);
+		return "skill/show";
 	}
 	@RequestMapping(path = "deleteSkill.do", method = RequestMethod.GET)
 	public String deleteSkill(@RequestParam("idd") Integer num, Skill skill, Model model) {
 
 		skill = dao.findSkillById(num);
-		System.err.println(skill);
-		System.err.println();
+	model.addAttribute("deleted",skill);
 	dao.delete(skill);
 		
 		
-		return "index";
+		return "skill/show";
 	}
 	
 	
