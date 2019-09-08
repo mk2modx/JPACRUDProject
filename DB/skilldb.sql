@@ -47,10 +47,14 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 START TRANSACTION;
 USE `skilldb`;
 INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (1, 'Tie Knots', 'Learn to tie Knots', 'BEG', 200, 'https://www.animatedknots.com/basic-knots');
-INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (2, 'First Aid', 'Learn First Aid and Safety', 'BEG', 500, 'https://kidshealth.org/en/parents/firstaid-safe/');
+INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (2, 'First Aid', 'Learn First Aid and Safety', 'BEG', 300, 'https://kidshealth.org/en/parents/firstaid-safe/');
 INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (3, 'Saving Money', 'Learn to Save Money', 'ADV', 1000, 'https://www.themint.org/kids/saving-tricks.html');
-INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (4, 'Hand Tools', 'Introduction to hand tools', 'INT', 200, 'https://www.popularmechanics.com/home/tools/reviews/a3792/4295884/');
-INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (5, 'Invention', 'Learn to invent', 'BEG', 200, 'https://sciencing.com/ideas-kid-inventions-6303021.html');
+INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (4, 'Hand Tools', 'Introduction to hand tools', 'INT', 500, 'https://www.popularmechanics.com/home/tools/reviews/a3792/4295884/');
+INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (5, 'Inventions', 'Learn to invent', 'BEG', 200, 'https://sciencing.com/ideas-kid-inventions-6303021.html');
+INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (6, 'How Things Work', 'Learn about how things work', 'BEG', 300, 'https://www.howstuffworks.com/');
+INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (7, 'How to Code ', 'Learn to Code for Beginners', 'BEG', 300, 'https://www.tynker.com/');
+INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (8, 'Puppet Show', 'Learn to  be a puppeteer', 'ADV', 500, 'https://www.youtube.com/watch?v=rTlAWshiWc4');
+INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (9, 'Become a Ninja', 'Learn to be a ninjutsu master', 'ADV', 9999, 'https://www.kidzworld.com/article/6973-becoming-a-ninja');
 
 COMMIT;
 

@@ -27,32 +27,35 @@ Film ID: <input type="text" name="upd"/>
 </form>
 </div> -->
 <br>
-<div>
 
 <c:forEach items="${skillset}" var="skill">
- <table style="border:1px solid black;">
+
+<div>
+
+ <table class="center-div" style="width: 500px; border: #999999 1px solid;">
 
 <tr>
-  <td><h3> Skill : ${skill.id} </h3></td>
-  <td><h3><a href="${skill.link}">${skill.name} </a> </h3></td>
+  <td class="td-center"><h3> Skill level : ${skill.proficiency} </h3></td>
+  <td class="td-center"><h3><a href="${skill.link}">${skill.name} </a> </h3></td>
   </tr>
-  <tr><td><p>${skill.description}</p></td></tr>
+  <tr><td class="td-center"><p>${skill.description}</p></td></tr>
   <tr>
-  <td><form action="deleteSkill.do" method="GET">
+  <td class="td-center"><form action="deleteSkill.do" method="GET">
 <input name="idd" type="hidden" value="${skill.id}" />
 <input type="submit" value="Delete Skill">
 </form></td>
 
-  <td><form action="updateLink.do" method="GET">
+  <td class="td-center"><form action="updateLink.do" method="GET">
 <input name="upd" type="hidden" value="${skill.id}" />
 <input type="submit" value="Update Skill">
 </form>
 </td>
 </tr>
 </table>
-</c:forEach>
 
 </div>
+</c:forEach>
+
 
 </body>
 </html>
