@@ -49,7 +49,7 @@ USE `skilldb`;
 INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (1, 'Tie Knots', 'Learn to tie Knots', 'BEG', 200, 'https://www.animatedknots.com/basic-knots');
 INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (2, 'First Aid', 'Learn First Aid and Safety', 'BEG', 300, 'https://kidshealth.org/en/parents/firstaid-safe/');
 INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (3, 'Saving Money', 'Learn to Save Money', 'ADV', 1000, 'https://www.themint.org/kids/saving-tricks.html');
-INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (4, 'Hand Tools', 'Introduction to hand tools', 'INT', 500, 'https://www.popularmechanics.com/home/tools/reviews/a3792/4295884/');
+INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (4, 'Hand Tools', 'Introduction to hand tools', 'INT', 500, 'https://www.familyhandyman.com/tools/diy-for-kids/');
 INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (5, 'Inventions', 'Learn to invent', 'BEG', 200, 'https://sciencing.com/ideas-kid-inventions-6303021.html');
 INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (6, 'How Things Work', 'Learn about how things work', 'BEG', 300, 'https://www.howstuffworks.com/');
 INSERT INTO `skill` (`id`, `skill_name`, `description`, `proficiency`, `point_value`, `link`) VALUES (7, 'How to Code ', 'Learn to Code for Beginners', 'BEG', 300, 'https://www.tynker.com/');

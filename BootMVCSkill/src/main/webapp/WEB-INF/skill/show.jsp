@@ -13,29 +13,23 @@
 <c:choose>
 <c:when test="${! empty skill}">
 	<div>
-		<h3>${skill.id}</h3>
-		<h3>${skill.name}</h3>
-		<h3>${skill.description}</h3>
+		<h4></h4>
+		<h4>Skill Name : ${skill.name}(${skill.id})</h4>
+		<h4>DesCription : ${skill.description}</h4>
+		<h4>Skill level : ${skill.proficiency}</h4>
+		<h4>XP+ : ${skill.pointValue}</h4>
+		<h4>link : <a href="${skill.link}">${skill.link}</a></h4>
 		<%-- <form action="deleteSkill.do" method="GET">
 			<input name="idd" type="hidden" value="${skill.id}" /> <input
 				type="submit" value="Delete Skill">
 		</form> --%>
 	</div>
 </c:when>
-<c:when test="${! empty updated} }">
-	<div>
-		<h5>${updated.id}</h5>
-		<h5>${updated.name}</h5>
-	</div>
-</c:when>
-
-<c:when test="${! empty added} }">
-	<div>
-		<h5>${added.id}</h5>
-		<h5>${added.name}</h5>
-	</div>
-</c:when>
+<c:otherwise>
+<p>No Skill Available</p>
+</c:otherwise>
 </c:choose>
-
+<a href="${skill.link}">
+<iframe width="1120" height="630" src="${skill.link}" frameborder="1" allowfullscreen></iframe> </a>
 </body>
 </html>

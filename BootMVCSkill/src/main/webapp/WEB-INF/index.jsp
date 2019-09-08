@@ -8,7 +8,7 @@
 <title>Main Menu</title>
 </head>
 <body>
-<div>
+<div><nav>
 <table><tr>
 <td><form action="getSkill.do" method="GET">
   Search for Skills <input type="text" name="ski" >
@@ -19,6 +19,7 @@
 <input type="submit" value="Add Skill" style="height:220px; width:150px">
 </form></td>
 </tr></table>
+</nav>
 </div>
 <!-- <div>
 <form action="updateLink.do" method="GET">
@@ -27,6 +28,7 @@ Film ID: <input type="text" name="upd"/>
 </form>
 </div> -->
 <br>
+<table>
 
 <c:forEach items="${skillset}" var="skill">
 
@@ -36,9 +38,15 @@ Film ID: <input type="text" name="upd"/>
 
 <tr>
   <td class="td-center"><h3> Skill level : ${skill.proficiency} </h3></td>
-  <td class="td-center"><h3><a href="${skill.link}">${skill.name} </a> </h3></td>
+  <td class="td-center"><h3><a href="getSkill.do?ski=${skill.id}">${skill.name} </a> </h3></td>
   </tr>
-  <tr><td class="td-center"><p>${skill.description}</p></td></tr>
+  <tr>
+  <td class="td-center"><p>${skill.description}</p></td>
+  </tr>
+  <tr>
+  
+  <td class="td-center">link : <a href="${skill.link}">${skill.link}</a></td>
+  </tr>
   <tr>
   <td class="td-center"><form action="deleteSkill.do" method="GET">
 <input name="idd" type="hidden" value="${skill.id}" />
@@ -56,6 +64,7 @@ Film ID: <input type="text" name="upd"/>
 </div>
 </c:forEach>
 
+</table>
 
 </body>
 </html>

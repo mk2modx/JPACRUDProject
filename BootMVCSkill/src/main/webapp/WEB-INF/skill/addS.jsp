@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Add Film</h1>
+<h2>Add Skill</h2>
 <a href="home.do">Home</a>
 
 <form action ="addSkillForm.do" method="POST" >
@@ -45,9 +45,10 @@
 <td><input name="link" type="text" value="${skill.link}"/> </td>
 </tr>
 <tr>
-<td><input type="submit" value="Update" /></td>
+<td><input type="submit" value="Add Skill" /></td>
 </tr>
 </table>
 </form>
+<iframe width="1120" height="630" src="https://www.bing.com/" frameborder="1" allowfullscreen></iframe>
 </body>
 </html>
