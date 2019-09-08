@@ -28,7 +28,13 @@
 </tr>
  <tr>
 <td>Proficiency</td>
-<td><input name="proficiency" type="text" value="${skill.proficiency}"/></td>
+<td><select name="proficiency" >
+<option value="1">${skill.proficiency}</option>
+<option value="2">BEG</option>
+<option value="3">INT</option>
+<option value="4">ADV</option>
+
+</select></td>
 </tr>
  <tr>
 <td>Point Value</td>

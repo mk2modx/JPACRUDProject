@@ -28,13 +28,15 @@ Film ID: <input type="text" name="upd"/>
 </div> -->
 <br>
 <div>
-<table class="table table-striped">
 
 <c:forEach items="${skillset}" var="skill">
+ <table style="border:1px solid black;">
+
 <tr>
   <td><h3> Skill : ${skill.id} </h3></td>
-  <td><h3><a href="getSkill.do?skillId=${skill.id}">${skill.name} </a> </h3></td>
+  <td><h3><a href="${skill.link}">${skill.name} </a> </h3></td>
   </tr>
+  <tr><td><p>${skill.description}</p></td></tr>
   <tr>
   <td><form action="deleteSkill.do" method="GET">
 <input name="idd" type="hidden" value="${skill.id}" />
@@ -47,9 +49,9 @@ Film ID: <input type="text" name="upd"/>
 </form>
 </td>
 </tr>
+</table>
 </c:forEach>
 
-</table>
 </div>
 
 </body>
