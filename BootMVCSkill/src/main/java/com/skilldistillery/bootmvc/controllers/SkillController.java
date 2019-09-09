@@ -28,13 +28,20 @@ public class SkillController {
 	  // return "index"; // if using a ViewResolver.
 	}
 	
-	@RequestMapping(path = "getSkill.do")
+	@RequestMapping(path = "getSkill.do")   //Search ID
 	public String showFilm(@RequestParam("ski") Integer sid, Model model) {
 	Skill f = dao.findSkillById(sid);
 	model.addAttribute("skill", f);
 		
 		return "skill/show";
 	}
+//	@RequestMapping(path = "getSkill.do") //Search keyword
+//	public String showSearched(@RequestParam("ski") String word, Model model) {
+//		List<Skill> f = dao.findSkillByWord(word);
+//		model.addAttribute("skill", f);
+//		
+//		return "skill/show";
+//	}
 	
 	@RequestMapping(path = "addSkillLink.do", method = RequestMethod.GET)
 	public String addLink(Model model) {

@@ -17,4 +17,6 @@ public interface SkillDAO {
 	boolean update(Skill skill);
 
 	boolean delete(Skill skill);
+
+	List<Skill> findSkillByWord(String word);
 }

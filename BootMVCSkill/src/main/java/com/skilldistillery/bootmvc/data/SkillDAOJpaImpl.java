@@ -24,6 +24,18 @@ public class SkillDAOJpaImpl implements SkillDAO {
 		return em.find(Skill.class, id);
 	}
 
+//	@Override
+//	public List<Skill> findSkillByWord(String word) {
+//		List<Skill> listWord = new ArrayList<Skill>();
+//		String query = "SELECT s FROM Skill s WHERE s.name LIKE :words";
+//		listWord = em.createQuery(query, Skill.class)
+//				.setParameter("words", word)
+//				.getResultList();
+//		System.out.println(listWord.size());
+//		System.err.println("*************************************");
+//		return listWord;
+//	}
+	
 	@Override
 	public List<Skill> findAll() {
 		List<Skill> list = new ArrayList<>();
@@ -60,6 +72,12 @@ public class SkillDAOJpaImpl implements SkillDAO {
 		em.remove(del);
 		em.flush();
 		return success;
+	}
+
+	@Override
+	public List<Skill> findSkillByWord(String word) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -12,6 +12,7 @@
 
 <c:choose>
 <c:when test="${! empty skill}">
+<%--  <c:forEach items="${skill}" var="skill">--%>
 	<div>
 		<h4></h4>
 		<h4>Skill Name : ${skill.name}(${skill.id})</h4>
@@ -24,6 +25,7 @@
 				type="submit" value="Delete Skill">
 		</form> --%>
 	</div>
+	<%-- </c:forEach> --%>
 </c:when>
 <c:otherwise>
 <p>No Skill Available</p>

@@ -5,6 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+ <style>
+    h1 { color: #FF0000; }
+    h2 { color: 00FFFF; }
+  </style>
 <title>Main Menu</title>
 </head>
 <body>
@@ -21,12 +25,9 @@
 </tr></table>
 </nav>
 </div>
-<!-- <div>
-<form action="updateLink.do" method="GET">
-Film ID: <input type="text" name="upd"/>
-<input type="submit" value="Update Skill">
-</form>
-</div> -->
+
+<h1>KIDSKILLS </h1>
+<h3>Level up your kids. </h3>
 <br>
 <table>
 

@@ -29,10 +29,10 @@
  <tr>
 <td>Proficiency</td>
 <td><select name="proficiency" >
-<option value="1">${skill.proficiency}</option>
-<option value="2">BEG</option>
-<option value="3">INT</option>
-<option value="4">ADV</option>
+<option value="${skill.proficiency}">${skill.proficiency}</option>
+<option value="BEG">BEG</option>
+<option value="INT">INT</option>
+<option value="ADV">ADV</option>
 
 </select></td>
 </tr>
