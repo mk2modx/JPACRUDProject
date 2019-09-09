@@ -15,7 +15,7 @@
 <div><nav>
 <table><tr>
 <td><form action="getSkill.do" method="GET">
-  Search for Skills <input type="text" name="ski" >
+  Search for Skills by Id : <input type="text" name="ski" >
   <input type="submit" value="Show Skill" />
 </form><td>
 <td>
